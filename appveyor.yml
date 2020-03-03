@@ -38,13 +38,11 @@ install:
 
 
 build_script:
-  stage_1:
-      - ps: .\.appveyor\build.ps1
-      - cmd: del .\bin\NFsim_x64.exe
-      - cmd: pwd
-      - cmd: ls
-  stage_2:
-      - cmd: echo %This is stage_2%
+  - ps: .\.appveyor\build.ps1
+  - cmd: del .\bin\NFsim_x64.exe
+  - cmd: pwd
+  - cmd: ls .\bin\
+  - cmd: echo %This is stage_2%
 #  - ps: .\.appveyor\build_nfSim.ps1
 #  - cmd: dir
 #   - cmd: ls \projects\vcell-solvers\build
